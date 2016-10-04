@@ -1,0 +1,8 @@
+<h1>Recent Comments</h1>
+<ul>
+  <li ng-repeat="comment in comments | orderBy : -created_at | limitTo : 5">
+
+  {{ comment.author }} <h5>{{ comment.rating }}</h5>{{ comment }}
+</li>
+
+</ul>

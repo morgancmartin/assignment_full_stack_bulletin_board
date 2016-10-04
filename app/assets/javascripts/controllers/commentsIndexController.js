@@ -1,5 +1,8 @@
 app.controller("commentsIndexCtrl", ["restangularService", "$scope", function(restangularService, $scope){
+  (restangularService.getRecentComments().then(function(response) {
+    console.log(response)
+  }))
 
-  $scope.posts = restangularService.getRecentComments().$object
+  $scope.comments = restangularService.getRecentComments().$object
 
 }]);
